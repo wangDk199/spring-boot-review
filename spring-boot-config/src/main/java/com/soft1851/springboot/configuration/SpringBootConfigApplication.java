@@ -9,7 +9,8 @@ public class SpringBootConfigApplication {
 
     public static void main(String[] args) {
 //        SpringApplication.run(SpringBootConfigApplication.class, args);
-        new SpringApplicationBuilder(SpringBootApplication.class).bannerMode(Banner.Mode.CONSOLE).run(args);
+        new SpringApplicationBuilder(SpringBootConfigApplication.class)
+                .bannerMode(Banner.Mode.CONSOLE).run(args);
     }
 
 }

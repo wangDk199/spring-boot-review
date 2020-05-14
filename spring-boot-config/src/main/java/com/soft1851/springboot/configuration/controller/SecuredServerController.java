@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  **/
 @RestController
 @Slf4j
-public class SecuredServerController {
+ class SecuredServerController {
     @RequestMapping("/secured")
     public String secured() {
         log.info("Inside secured()");

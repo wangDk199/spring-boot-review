@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.soft1851</groupId>
-    <artifactId>spring-boot-configuration</artifactId>
+    <artifactId>spring-boot-task-scheduling</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-config</name>
+    <name>spring-boot-task-scheduling</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -19,14 +19,6 @@
     </properties>
 
     <dependencies>
-        <!--解决application.properties文中经常见到的：Cannot resolve configuration property提示-->
-        <!--配置类加上 @ConfigurationProperties 注解-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -54,7 +46,10 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

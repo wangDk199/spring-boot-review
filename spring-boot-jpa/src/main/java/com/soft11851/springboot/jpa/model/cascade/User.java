@@ -1,7 +1,11 @@
 package com.soft11851.springboot.jpa.model.cascade;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -11,20 +15,37 @@ import java.util.List;
  * @Date 2020/5/12
  * @Version 1.0
  **/
-@Data
 @Entity
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
+    /**
+     * 主键，策略为自增
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 20, unique = true)
-    private String username;
+    /**
+     * nullable = false为非空约束，unique = true是唯一约束
+     */
+    @Column(nullable = false, unique = true)
+    private String userName;
 
-    @Column(length = 100)
+    @Column(nullable = false)
     private String password;
-    @ManyToMany
-    @JoinTable(name = "user_authority", joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "authority_id"))
-    private List<Authority> authorityList;
+
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(length = 32)
+    private String nickName;
+
+    @Column
+    private Integer age;
+
+    @Column
+    private LocalDateTime regTime;
 }
