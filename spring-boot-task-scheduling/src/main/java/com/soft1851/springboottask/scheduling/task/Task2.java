@@ -14,7 +14,7 @@ import java.util.zip.DataFormatException;
  * @Date 2020/5/14
  * @Version 1.0
  **/
-@Component
+//@Component
 public class Task2 {
     private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH:mm:ss");
 
