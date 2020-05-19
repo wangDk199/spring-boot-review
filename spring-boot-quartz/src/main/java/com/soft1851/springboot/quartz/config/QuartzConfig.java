@@ -24,7 +24,7 @@ import java.util.Properties;
  * @Version 1.0
  **/
 @Configuration
-public class QuartzConfig {
+public class  QuartzConfig {
     /**
      * 配置JobFactory
      * @param applicationContext

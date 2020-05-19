@@ -136,3 +136,1625 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't 
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2844)
 	... 5 common frames omitted
 
+2020-05-19 01:38:33.009 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 01:39:05.001 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 01:39:41.021 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 01:40:45.004 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 01:40:49.033 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 01:41:57.050 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 01:42:25.005 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 01:43:05.063 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 01:44:05.007 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 01:44:13.086 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 01:45:21.092 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 01:45:45.009 ERROR 23412 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589823442373_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:16:54.620 ERROR 18540 --- [restartedMain] c.s.s.q.controller.DynamicJobController  DynamicJobController.java:50: printStackTrace 
+
+org.quartz.JobPersistenceException: Couldn't obtain job names: Table 'test.qrtz_job_details' doesn't exist
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getJobNames(JobStoreSupport.java:1935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$21.execute(JobStoreSupport.java:1923)
+	at org.quartz.impl.jdbcjobstore.JobStoreCMT.executeInLock(JobStoreCMT.java:245)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeWithoutLock(JobStoreSupport.java:3800)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getJobKeys(JobStoreSupport.java:1920)
+	at org.quartz.core.QuartzScheduler.getJobKeys(QuartzScheduler.java:1439)
+	at org.quartz.impl.StdScheduler.getJobKeys(StdScheduler.java:470)
+	at com.soft1851.springboot.quartz.controller.DynamicJobController.reStartAllJobs(DynamicJobController.java:112)
+	at com.soft1851.springboot.quartz.controller.DynamicJobController.initialize(DynamicJobController.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.soft1851.springboot.quartz.SpringBootQuartzApplication.main(SpringBootQuartzApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_job_details' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectJobsInGroup(StdJDBCDelegate.java:980)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getJobNames(JobStoreSupport.java:1933)
+	... 39 common frames omitted
+
+2020-05-19 15:16:56.985 ERROR 18540 --- [restartedMain] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.initialize(JobStoreSupport.java:3920)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.schedulerStarted(JobStoreSupport.java:692)
+	at org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:539)
+	at org.quartz.impl.StdScheduler.start(StdScheduler.java:142)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.startScheduler(SchedulerFactoryBean.java:728)
+	at org.springframework.scheduling.quartz.SchedulerFactoryBean.start(SchedulerFactoryBean.java:800)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.soft1851.springboot.quartz.SpringBootQuartzApplication.main(SpringBootQuartzApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 29 common frames omitted
+
+2020-05-19 15:16:56.991 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:16:56.993 ERROR 18540 --- [schedulerFactoryBean_QuartzSchedulerThread] org.quartz.core.ErrorLogger              QuartzScheduler.java:2407: An error occurred while scanning for the next triggers to fire.
+
+org.quartz.JobPersistenceException: Couldn't acquire next trigger: Table 'test.qrtz_triggers' doesn't exist
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2923)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2805)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2803)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3864)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2613)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2844)
+	... 5 common frames omitted
+
+2020-05-19 15:18:05.009 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:18:36.993 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:19:13.021 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:20:16.996 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:20:21.036 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:21:29.050 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:21:56.997 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:22:37.059 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:23:36.999 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:23:45.073 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:24:53.087 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:25:17.003 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:26:01.098 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:26:57.005 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:27:09.113 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:28:17.122 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:28:37.007 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:29:25.131 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:30:17.009 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:30:33.145 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:31:41.157 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:31:57.012 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:32:49.170 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:33:37.013 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:33:57.179 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:35:05.190 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:35:17.015 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:36:13.204 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:36:57.018 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:37:21.212 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:38:29.223 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:38:37.020 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:39:37.237 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:40:17.022 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:40:45.242 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:41:53.254 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:41:57.024 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:43:01.263 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:43:37.027 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:44:09.272 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:45:17.029 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:45:17.284 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:46:25.596 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:46:57.034 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:47:33.608 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:48:37.034 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:48:41.616 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:49:49.629 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:50:17.035 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:50:57.638 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:51:57.036 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:52:05.649 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:53:13.662 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:53:37.040 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:54:21.674 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:55:17.041 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:55:29.680 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:56:37.694 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:56:57.044 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:57:45.707 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 15:58:37.044 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_MisfireHandler] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:4017: MisfireHandler: Error handling misfires: Database error recovering from misfires.
+
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_triggers' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:393)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+
+2020-05-19 15:58:53.717 ERROR 18540 --- [QuartzScheduler_schedulerFactoryBean-DESKTOP-API95KB1589872614579_ClusterManager] o.s.s.quartz.LocalDataSourceJobStore     JobStoreSupport.java:3941: ClusterManager: Error managing cluster: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+
+org.quartz.impl.jdbcjobstore.LockException: Failure obtaining db row lock: Table 'test.qrtz_locks' doesn't exist
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:184)
+	at org.quartz.impl.jdbcjobstore.DBSemaphore.obtainLock(DBSemaphore.java:113)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doCheckin(JobStoreSupport.java:3335)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.manage(JobStoreSupport.java:3935)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$ClusterManager.run(JobStoreSupport.java:3972)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.qrtz_locks' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.quartz.impl.jdbcjobstore.StdRowLockSemaphore.executeSQL(StdRowLockSemaphore.java:123)
+	... 4 common frames omitted
+
+2020-05-19 16:21:37.127 ERROR 19476 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   SqlExceptionHelper.java:142: Table 'test.job_entity' doesn't exist
+2020-05-19 16:21:37.195 ERROR 19476 --- [restartedMain] o.s.boot.SpringApplication               SpringApplication.java:837: Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dynamicJobController': Invocation of init method failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.soft1851.springboot.quartz.SpringBootQuartzApplication.main(SpringBootQuartzApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:281)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:255)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:528)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:178)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy85.findAll(Unknown Source)
+	at com.soft1851.springboot.quartz.service.DynamicJobService.loadJobs(DynamicJobService.java:40)
+	at com.soft1851.springboot.quartz.controller.DynamicJobController.reStartAllJobs(DynamicJobController.java:121)
+	at com.soft1851.springboot.quartz.controller.DynamicJobController.initialize(DynamicJobController.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157)
+	... 24 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:67)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2292)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2050)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2012)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:953)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:354)
+	at org.hibernate.loader.Loader.doList(Loader.java:2838)
+	at org.hibernate.loader.Loader.doList(Loader.java:2820)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2652)
+	at org.hibernate.loader.Loader.list(Loader.java:2647)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:396)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1404)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1565)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1533)
+	at org.hibernate.query.Query.getResultList(Query.java:165)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:355)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.ImplementationInvocationMetadata.invoke(ImplementationInvocationMetadata.java:72)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:382)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:205)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:549)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:155)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 41 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.job_entity' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+	... 77 common frames omitted
+
